@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JM Studio</title>
+    <link rel="stylesheet" href="./main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <a href="./index.html" aria-label="Voltar para o início" title="Clique para voltar à página inicial">
+                    <span class="jm">JM</span> <span class="studio">Studio</span>
+                </a>
+            </h1>            <nav>
+                <ul class="nav-list">
+                    <li><a href="#about">SOBRE</a></li>
+                    <li><a href="#services">SERVIÇOS</a></li>
+                    <li><a href="#portfolio">PORTFÓLIO</a></li>
+                    <li><a href="#contact">CONTATO</a></li>
+                </ul>
+                <button class="menu-toggle" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="video-container">
+        <div>
+            <video autoplay loop muted playsinline>
+                <source src="https://redproducao.com/wp-content/uploads/2023/04/Reel-2023-Site.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+        </div>
+    </section>
+
+    <section id="about" class="reveal">
+        <div class="container">
+            <div>
+                <h2>Animações Criativas, Apresentações Profissionais e Produção Audiovisual de Alto Impacto</h2>
+                <p>
+                    No JM Studio, somos apaixonados por transformar ideias em experiências visuais inesquecíveis. Com criatividade e tecnologia de ponta, desenvolvemos animações envolventes, apresentações impactantes e produções audiovisuais de alta qualidade para empresas que desejam se destacar.             
+                </p>
+                <p>
+                    Nosso compromisso é entregar conteúdos que unem emoção, clareza e profissionalismo, garantindo que cada projeto comunique sua mensagem de forma eficaz. Trabalhamos lado a lado com nossos clientes, alinhando cada detalhe às suas necessidades e objetivos.                
+                </p>
+                <p>
+                    Se você busca inovação e excelência para fortalecer sua marca, entre em contato e descubra como podemos elevar sua comunicação para outro nível!                 </p>
+                    <img src="./images/institucional.png" alt="Imagem institucional">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Serviços</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Direção Criativa</h3>
+                    <p>
+                        Criamos narrativas únicas para sua marca, garantindo uma visão estética diferenciada do início ao fim do projeto.
+                    </p>
+                </div>
+                <div class="service-item">
+                    <h3>Produção Audiovisual</h3>
+                    <p>
+                        Transformamos ideias em experiências visuais autênticas através de roteiro, gravação e pós-produção completos.
+                    </p>
+                </div>
+                <div class="service-item">
+                    <h3>Pós-Produção</h3>
+                    <p>
+                        Refinamos cada detalhe para destacar a essência do seu projeto, alinhando narrativa, identidade visual e impacto emocional.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="portfolio" class="reveal">
+        <div class="container">
+            <h2>Nosso Portfólio</h2>
+    
+            <div class="portfolio-category">
+                <h3>Animações</h3>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <iframe src="https://www.youtube.com/embed/rbZ7BLfQrZE?si=GerLHqdVqhHU9-hY" frameborder="0" allowfullscreen 
+                            title="Animação 1 - Exemplo de animação criativa" aria-label="Animação 1 - Exemplo de animação criativa"></iframe>
+                    </div>
+                    <div class="portfolio-item">
+                        <iframe src="https://www.youtube.com/embed/Bl1FOKpFY2Q?si=SN88erwXQUj3XS2H" frameborder="0" allowfullscreen 
+                            title="Animação 2 - Apresentação visual moderna" aria-label="Animação 2 - Apresentação visual moderna"></iframe>
+                    </div>
+                    <div class="portfolio-item">
+                        <iframe src="https://www.youtube.com/embed/Itjsk5kvSXQ?si=Pm91pc1L9s6sMaeO" frameborder="0" allowfullscreen 
+                            title="Animação 3 - Motion Graphics para empresas" aria-label="Animação 3 - Motion Graphics para empresas"></iframe>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="portfolio-category" class="reveal">
+                <h3>Apresentações</h3>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <iframe src="https://www.youtube.com/embed/lc6W-wKPNnc?si=9lCBPdxnHWz45f9L" frameborder="0" allowfullscreen 
+                            title="Apresentação 1 - Pitch de negócios" aria-label="Apresentação 1 - Pitch de negócios"></iframe>
+                    </div>
+                    <div class="portfolio-item">
+                        <iframe src="https://www.youtube.com/embed/EWqnWXnXURw?si=GeFfd7vWZKu6hvCO" frameborder="0" allowfullscreen 
+                            title="Apresentação 2 - Storytelling em vídeos" aria-label="Apresentação 2 - Storytelling em vídeos"></iframe>
+                    </div>
+                    <div class="portfolio-item">
+                        <iframe src="https://www.youtube.com/embed/tjJvL8FP1IU?si=T1IQ995bIIwHP6wg" frameborder="0" allowfullscreen 
+                            title="Apresentação 3 - Estratégia visual para marcas" aria-label="Apresentação 3 - Estratégia visual para marcas"></iframe>
+                    </div>
+                </div>
+            </div>    
+    
+            <div class="portfolio-category"class="reveal">
+                <h3>Vídeos</h3>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <iframe src="https://www.youtube.com/embed/mGsJfcc35pM" frameborder="0" allowfullscreen 
+                            title="Vídeo 1 - Produção audiovisual criativa" aria-label="Vídeo 1 - Produção audiovisual criativa"></iframe>
+                    </div>
+                    <div class="portfolio-item">
+                        <iframe src="https://www.youtube.com/embed/FajnwZZpjZs?si=S2z6eT9xVG9AUaSN" frameborder="0" allowfullscreen 
+                            title="Vídeo 2 - Campanha de marketing digital" aria-label="Vídeo 2 - Campanha de marketing digital"></iframe>
+                    </div>
+                    <div class="portfolio-item">
+                        <iframe src="https://www.youtube.com/embed/jJ3eYABR__s?si=L4fQ3BufYLVYz-C6" frameborder="0" allowfullscreen 
+                            title="Vídeo 3 - Edição cinematográfica profissional" aria-label="Vídeo 3 - Edição cinematográfica profissional"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="reveal">
+        <div class="container">
+            <h2>Contato</h2>
+            <div class="contact-methods">
+                <div class="contact-form">
+                    <h3>Fale conosco</h3>
+                    <form id="contact-form" method="post">
+                        <input type="text" name="name" placeholder="Seu nome" required>
+                        <input type="email" name="email" placeholder="Seu e-mail" required>
+                        <input type="tel" name="phone" placeholder="Seu telefone"required>
+                        <input type="text" name="company" placeholder="Empresa (opcional)">
+                        
+                        <select name="subject" required>
+                            <option value="" disabled selected>O que você precisa?</option>
+                            <option value="orçamento">Animação</option>
+                            <option value="parceria">Video</option>
+                            <option value="suporte">Apresentação</option>
+                            <option value="outros">Combo</option>
+                        </select>
+    
+    
+                        <textarea name="message" placeholder="Conte um pouco mais aqui!" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                    <p id="form-message"></p>
+
+                </div>
+    
+                <div class="contact-info">
+                    <h3>Nos acompanhe</h3>
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://www.instagram.com/" title="Siga-nos no Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" title="Siga-nos no Facebook">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" title="Visite nosso canal no YouTube">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="contact-location">
+                    <h3>Venha até nós</h3>
+                    <p>Rua JavaScript n° 123, Vila HTML - São Paulo - SP</p>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.817013191339!2d-46.63662128446489!3d-23.576076667547004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b2e60b1aaf%3A0x4cba4698b66091a!2sSão%20Paulo%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1644530585863!5m2!1spt-BR!2sbr" 
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <footer>
+        <div class="container">
+            <p>
+                &copy; JM Studio - Todos os direitos reservados - 2025  
+                Desenvolvido por 
+                <a href="https://wa.me/11950523010" target="_blank">Jeferson Moreira</a>
+            </p>
+        </div>
+    </footer>
+    
+<!-- Botão Fixo do WhatsApp -->
+<a href="https://wa.me/11950523010" class="whatsapp-button" target="_blank" aria-label="Entre em contato pelo WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script src="script_form.js"></script>
+<script src="script_menu.js"></script>
+<script src="script_carregamento.js"></script>
+</body>
+</html>
