@@ -152,6 +152,9 @@ a{
         opacity: 0;
         transform: translateY(-20px);
         transition: all 0.3s ease;
+        margin-left: auto; /* Empurra o botão para a direita */
+        padding: 20px;
+
     }
     .nav-list.active {
         display: flex;
@@ -173,12 +176,18 @@ a{
     text-align: left;
     position: relative;
     z-index: 10; /* Mantém o conteúdo visível acima do vídeo */
+
+
 }
 #about img {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 20px auto;
+}
+
+#about h2 {
+    margin-left: 10px;
 }
 
 
@@ -539,3 +548,36 @@ footer a:hover {
 
 
 
+@media (max-width: 768px) {
+    #about{
+        scroll-margin-top: 180px; /* Mantém o título visível ao navegar para a seção */
+
+    }
+    #services{
+        scroll-margin-top: 180px; /* Mantém o título visível ao navegar para a seção */
+
+    }
+    #portfolio{
+        scroll-margin-top: 180px; /* Mantém o título visível ao navegar para a seção */
+
+    }
+    #contact{
+        scroll-margin-top: 180px; /* Mantém o título visível ao navegar para a seção */
+
+    }
+}
+
+@media (max-width: 768px) {
+    
+
+    .services-grid, .portfolio-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+}
