@@ -36,12 +36,6 @@
     }
 }
 
-/* Ajuste para tablets (telas médias) */
-@media (min-width: 1300px) {
-    .video-container {
-        height: 70vh; /* Reduz a altura do vídeo */
-    }
-}
 
 
 /* Ajuste para smartphones (telas pequenas) */
