@@ -678,3 +678,55 @@ footer a:hover {
 
     }
 }
+
+/* Créditos */
+.credits {
+    margin-top: 20px;
+}
+
+.title {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.credits ul {
+    list-style: none;
+    padding: 0;
+}
+
+.credits li {
+    margin-bottom: 10px;
+}
+
+.credits a {
+    color: #ea0f73;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.credits a:hover {
+    text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .credits ul {
+        padding: 10px;
+    }
+    
+    .credits li {
+        font-size: 12px;
+    }
+}
+
+/* Estilizando o disclaimer */
+.disclaimer {
+    margin-top: 20px;
+    font-size: 0.85em;
+    color: #999;
+    text-align: left;
+}
+
+.disclaimer small {
+    font-style: italic;
+}
