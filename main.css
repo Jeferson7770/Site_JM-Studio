@@ -1,0 +1,760 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Seção de Home */
+
+.jm {
+    color: #ecf0f1; /* Cor para "JM" */
+}
+.studio {
+    color:  #ea0f73;
+}
+
+/* Estilização do vídeo responsivo */
+.video-container {
+    position: relative; /* Garante que o vídeo não sobreponha o menu */
+    width: 100%;
+    height: 100vh; /* Ocupa toda a tela */
+    overflow: hidden;
+    z-index: 1; /* Mantém o vídeo atrás do menu */
+    
+}
+
+/* Padrão (desktop) */
+#about, #services, #portfolio, #contact {
+    scroll-margin-top: 80px !important;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    #about, #services, #portfolio, #contact {
+        scroll-margin-top: 80px !important;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 768px) {
+    #about, #services, #portfolio, #contact {
+        scroll-margin-top: 80px !important; /* igual à altura real do header */
+    }
+}
+
+/* Telas muito pequenas */
+@media (max-width: 480px) {
+    #about, #services, #portfolio, #contact {
+        scroll-margin-top: 80px !important;
+    }
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ajuste para tablets (telas médias) */
+@media (max-width: 1024px) {
+    .video-container {
+        height: 70vh; /* Reduz a altura do vídeo */
+    }
+}
+
+
+
+/* Ajuste para smartphones (telas pequenas) */
+@media (max-width: 768px) {
+    .video-container {
+        height: 50vh; /* Mais espaço para o conteúdo abaixo */
+    }
+}
+
+/* Ajuste para dispositivos muito pequenos (mobile landscape) */
+@media (max-width: 480px) {
+    .video-container {
+        height: 40vh; /* Foco no conteúdo e não no vídeo */
+    }
+}
+
+@media (min-width: 500px) and (max-width: 1024px) {
+    .video-container {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Faz o vídeo ocupar toda a altura da tela */
+        overflow: hidden;
+    }
+
+    .video-container div {
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-container video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Remove espaços vazios ajustando o vídeo à tela */
+        display: block;
+    }
+}
+
+
+header,
+section h1,
+section h2,
+section h3,
+form button {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: #ea0f73;
+    text-align: center;
+}
+
+h1,h2{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+
+
+body, input, textarea, p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1); 
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    z-index: 1000; /* Mantém o menu acima de tudo */
+
+}
+
+header nav li{
+    display: inline;
+    margin-left: 16px;
+    font-size: 24px;
+}
+
+header nav li a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+header li a:hover {
+    color: #ea0f73;
+    text-decoration: none;
+}
+
+
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    
+}
+
+
+
+header .container,
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.logo {
+    font-size: 40px;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Menu responsivo */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+@media (min-width: 540px) and (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 1); 
+        width: 100%;
+        padding: 16px 0;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: all 0.3s ease;
+        align-items: center;       /* Centraliza horizontalmente */
+        padding: 50px;
+
+    }
+    .nav-list.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+@media (max-width: 530px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 1); 
+        width: 100%;
+        padding: 16px 0;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: all 0.3s ease;
+       align-items: center;       /* Centraliza horizontalmente */
+        padding: 20px;
+
+    }
+    .nav-list.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Seção de Sobre */
+
+#about {
+    padding-top: 80px; 
+    scroll-margin-top: 80px; /* Mantém o título visível ao navegar para a seção */
+    background-color: white;
+    padding: 50px 20px;
+    text-align: left;
+    position: relative;
+    z-index: 10; /* Mantém o conteúdo visível acima do vídeo */
+
+
+}
+#about img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+#about h2 {
+    margin-left: 10px;
+}
+
+
+
+/* Seção de Serviços */
+
+#services {
+    padding-top: 80px; 
+    scroll-margin-top: 80px; /* Mantém o título visível ao navegar para a seção */
+    background-color: white;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+
+}
+
+
+h3{
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Grid dos cards */
+.services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    min-width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+
+
+
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .service-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .service-item {
+        width: 100%;
+    }
+}
+
+
+section p {
+    margin: 10px;
+}
+
+
+/* Seção de Portfolio */
+
+#portfolio {
+    padding-top: 80px; 
+    scroll-margin-top: 80px; /* Mantém o título visível ao navegar para a seção */
+    background-color: white;
+    text-align: center;
+    padding: 50px 20px;
+    background: white;
+}
+
+.portfolio-category {
+    margin-bottom: 50px;
+}
+
+/* Grid dos vídeos */
+.portfolio-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    flex: 1 1 calc(33.33% - 20px); /* Ajusta para três vídeos por linha */
+    max-width: 350px; /* Evita que fiquem muito grandes */
+    min-width: 250px; /* Garante que fiquem proporcionais */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+video, iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Efeito de fade-in ao rolar */
+.portfolio-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .portfolio-item {
+        flex: 1 1 calc(50% - 20px); /* Duas colunas para telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex: 1 1 100%; /* Uma coluna para telas pequenas */
+    }
+}
+
+
+
+@media (min-width: 500px) and (max-width: 1180px) {
+    .container {
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .services-grid,
+    .portfolio-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item,
+    .portfolio-item {
+        width: 100%;
+        max-width: 500px;
+        margin-bottom: 20px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    h2, h3 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    
+
+    .services-grid, .portfolio-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* Seção de Contato */
+#contact {
+    padding-top: 80px;
+    scroll-margin-top: 80px; /* Mantém o título visível ao navegar para a seção */
+    background-color: #ecf0f1;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#contact .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: block;
+}
+
+#contact h2 {
+    color: #ea0f73;
+}
+
+/* Layout flexível para os métodos de contato */
+.contact-methods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Estilização do formulário */
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    background-color: #fff;
+    color: #000;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form select {
+    cursor: pointer;
+}
+
+/* Botão de envio */
+.contact-form button {
+    background-color: #ea0f73;
+    color: white;
+    padding: 14px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.contact-form button:hover {
+    background-color: #c00d5c;
+}
+
+#form-message{
+    color: #ea0f73;
+}
+
+/* Estilização dos links sociais */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+.social-links a {
+    font-size: 40px; /* Tamanho maior dos ícones */
+    color: #ea0f73; /* Cor branca por padrão */
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #c00d5c;
+}
+
+.social-links li {
+    display: inline;
+    margin-right: 8px;
+}
+
+.social-links li a {
+    text-decoration: none;
+}
+
+/* Estilização do endereço e mapa */
+.contact-location {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-location p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #000;
+
+}
+
+.contact-location iframe {
+    border-radius: 10px;
+    width: 100%;
+    height: 250px; /* Aumentado */
+}
+
+footer {
+    background-color: #000; /* Cor de fundo escura */
+    color: white;
+    text-align: left; 
+    padding: 15px 0; /* Espaçamento interno */
+    font-size: 14px;
+}
+
+footer a {
+    color: #ea0f73; /* Cor do link*/
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .contact-methods {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form, .contact-info, .contact-location {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 500px) and (max-width: 1180px) {
+    .contact-info {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Estilo base do botão do WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    right: 20px; /* Posição fixa à esquerda */
+    bottom: 60px; /* Posição acima do rodapé */
+    background-color: #25D366; /* Cor do WhatsApp */
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
+.whatsapp-button i {
+    font-size: 30px;
+}
+
+/* Efeito ao passar o mouse */
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade para tablets e smartphones */
+@media (max-width: 768px) {
+    .whatsapp-button {
+        right: 10px;
+        bottom: 100px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .whatsapp-button i {
+        font-size: 24px;
+    }
+}
+
+/* Ajuste para dispositivos muito pequenos (mobile landscape) */
+@media (max-width: 480px) {
+    .whatsapp-button {
+        right: 10px;
+        bottom: 130px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .whatsapp-button i {
+        font-size: 20px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    #about{
+        scroll-margin-top: 180px; /* Mantém o título visível ao navegar para a seção */
+
+    }
+    #services{
+        scroll-margin-top: 180px; /* Mantém o título visível ao navegar para a seção */
+
+    }
+    #portfolio{
+        scroll-margin-top: 180px; /* Mantém o título visível ao navegar para a seção */
+
+    }
+    #contact{
+        scroll-margin-top: 180px; /* Mantém o título visível ao navegar para a seção */
+
+    }
+}
+
+/* Créditos */
+.credits {
+    margin-top: 20px;
+}
+
+.title {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.credits ul {
+    list-style: none;
+    padding: 0;
+}
+
+.credits li {
+    margin-bottom: 10px;
+}
+
+.credits a {
+    color: #ea0f73;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.credits a:hover {
+    text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .credits ul {
+        padding: 10px;
+    }
+    
+    .credits li {
+        font-size: 12px;
+    }
+}
+
+/* Estilizando o disclaimer */
+.disclaimer {
+    margin-top: 20px;
+    font-size: 0.85em;
+    color: #999;
+    text-align: left;
+}
+
+.disclaimer small {
+    font-style: italic;
+}
